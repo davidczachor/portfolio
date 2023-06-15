@@ -10,10 +10,10 @@ export default function Home() {
     <div className="md:snap-y-none md:overflow-auto h-screen snap-y snap-mandatory overflow-scroll z-0 scroll-smooth">
       <Header />
 
-      <section id="hero" className="snap-center lg:snap-none">
+      <section id="hero" className="snap-center">
         <Hero />
       </section>
-      <section id="about" className="snap-start lg:snap-none">
+      <section id="about" className="snap-start">
         <About />
       </section>
       {/* Experiences */}

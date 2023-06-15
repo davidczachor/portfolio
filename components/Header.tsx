@@ -1,9 +1,9 @@
 import React from "react";
-import { FaHome } from "react-icons/fa";
-import { SiDiscord, SiGithub, SiLinkedin, SiTwitter } from "react-icons/si";
-import { SlEnvolope } from "react-icons/sl";
+import { SiGithub, SiLinkedin } from "react-icons/si";
+import { RxTriangleLeft } from "react-icons/rx";
+import Logo from "../public/images/logo.png";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Image from "next/image";
 
 type Props = {};
 
@@ -26,23 +26,19 @@ export default function Header({}: Props) {
         }}
         className="flex flex-row items-center"
       >
-        <Link href="/#hero">
-          <FaHome
-            className="h-10 w-10 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
-            title="Home"
+        <a
+          className="flex flex-row items-center font-medium tra text-gray-200 text-sm"
+          href="#hero"
+        >
+          <Image
+            className="relative rounded-full h-12 w-12 mx-auto object-cover"
+            src={Logo}
+            width={500}
+            height={500}
+            alt="Profile Picture"
           />
-        </Link>
-        <a href="https://www.linkedin.com/in/davidczachor/">
-          <SiLinkedin
-            className="h-10 w-10 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
-            title="LinkedIn"
-          />
-        </a>
-        <a href="https://github.com/davidczachor">
-          <SiGithub
-            className="h-10 w-10 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
-            title="Github"
-          />
+          {"DAVID"} <br />
+          {"CZACHOR."}
         </a>
       </motion.div>
       <motion.div
@@ -61,15 +57,18 @@ export default function Header({}: Props) {
         }}
         className="flex items-center"
       >
-        <Link
-          href="/#final-words"
-          className="group flex cursor-pointer items-center"
-        >
-          <SlEnvolope className="h-10 w-10 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors group-hover:fill-gray-300" />
-          <span className="hidden font-cal text-sm uppercase text-gray-400 group-hover:text-gray-300 md:inline-flex">
-            Contact
-          </span>
-        </Link>
+        <a href="https://www.linkedin.com/in/davidczachor/">
+          <SiLinkedin
+            className="h-10 w-10 cursor-pointer fill-gray-300 p-2 text-2xl transition-colors hover:fill-gray-200"
+            title="LinkedIn"
+          />
+        </a>
+        <a href="https://github.com/davidczachor">
+          <SiGithub
+            className="h-10 w-10 cursor-pointer fill-gray-300 p-2 text-2xl transition-colors hover:fill-gray-200"
+            title="Github"
+          />
+        </a>
       </motion.div>
     </header>
   );
