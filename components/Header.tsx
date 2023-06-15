@@ -25,13 +25,11 @@ export default function Header({}: Props) {
         className="flex flex-row items-center"
       >
         <a
-          className="flex flex-row items-center font-medium text-gray-400 text-sm"
+          className="flex flex-row items-center font-medium text-gray-400 text-sm hover:text-gray-300 transition-colors fill-gray-400 hover:fill-gray-300"
           href="#hero"
+          title="Home"
         >
-          <BsCodeSlash
-            className="h-12 w-12 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
-            title="LinkedIn"
-          />
+          <BsCodeSlash className="h-12 w-12 cursor-pointer p-2 text-2xl transition-colors" />
           czachor.dev
         </a>
       </motion.div>
