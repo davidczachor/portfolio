@@ -2,7 +2,7 @@ import React from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
-import ProfilePicture from "../public/images/cartoon-profile.jpg";
+import CartoonProfilePicture from "../public/images/cartoon-profile.jpg";
 import Link from "next/link";
 
 type Props = {};
@@ -26,13 +26,13 @@ export default function Hero({}: Props) {
       <BackgroundCircles />
       <Image
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src={ProfilePicture}
+        src={CartoonProfilePicture}
         width={500}
         height={500}
         alt="Profile Picture"
       />
       <div className="z-20">
-        <h2 className="text-sm font-semibold uppercase text-gray-500 pb-2 tracking-[10px]">
+        <h2 className="text-sm font-semibold uppercase text-gray-400 pb-2 tracking-[10px]">
           {"David Czachor"}
         </h2>
         <h1 className="text-5xl lg:text-6xl font-semibold px-10">
