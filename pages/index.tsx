@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="lg:snap-none lg:overflow-auto h-screen snap-y snap-center overflow-scroll z-0 scroll-smooth overscroll-none">
+    <div className="lg:snap-none lg:overflow-auto h-screen snap-y snap-center overflow-scroll z-0 scroll-smooth overscroll-none overflow-x-hidden">
       <Header />
 
       <section id="hero" className="snap-center">
