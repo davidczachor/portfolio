@@ -1,9 +1,7 @@
 import React from "react";
 import { SiGithub, SiLinkedin } from "react-icons/si";
-import { RxTriangleLeft } from "react-icons/rx";
-import Logo from "../public/images/logo.png";
+import { BsCodeSlash } from "react-icons/bs";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 type Props = {};
 
@@ -27,18 +25,14 @@ export default function Header({}: Props) {
         className="flex flex-row items-center"
       >
         <a
-          className="flex flex-row items-center font-medium tra text-gray-200 text-sm"
+          className="flex flex-row items-center font-medium text-gray-400 text-sm"
           href="#hero"
         >
-          <Image
-            className="relative rounded-full h-12 w-12 mx-auto object-cover"
-            src={Logo}
-            width={500}
-            height={500}
-            alt="Profile Picture"
+          <BsCodeSlash
+            className="h-12 w-12 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
+            title="LinkedIn"
           />
-          {"DAVID"} <br />
-          {"CZACHOR."}
+          czachor.dev
         </a>
       </motion.div>
       <motion.div
@@ -59,13 +53,13 @@ export default function Header({}: Props) {
       >
         <a href="https://www.linkedin.com/in/davidczachor/">
           <SiLinkedin
-            className="h-10 w-10 cursor-pointer fill-gray-300 p-2 text-2xl transition-colors hover:fill-gray-200"
+            className="h-10 w-10 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
             title="LinkedIn"
           />
         </a>
         <a href="https://github.com/davidczachor">
           <SiGithub
-            className="h-10 w-10 cursor-pointer fill-gray-300 p-2 text-2xl transition-colors hover:fill-gray-200"
+            className="h-10 w-10 cursor-pointer fill-gray-400 p-2 text-2xl transition-colors hover:fill-gray-300"
             title="Github"
           />
         </a>

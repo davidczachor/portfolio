@@ -15,6 +15,7 @@ export default function Hero({}: Props) {
       "Web Developer",
       "Problem Solver",
       "Full Stack Developer",
+      "Team Player",
     ],
     loop: true,
     delaySpeed: 2000,
