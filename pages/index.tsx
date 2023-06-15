@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <div className="lg:snap-none lg:overflow-auto h-screen snap-y snap-center overflow-scroll z-0 scroll-smooth overscroll-none overflow-x-hidden">
+    <div className="lg:snap-none lg:overflow-auto h-screen snap-y snap-center overflow-scroll z-0 overscroll-none overflow-x-hidden">
       <Header />
 
       <section id="hero" className="snap-center">
@@ -17,12 +17,10 @@ export default function Home() {
       <section id="about" className="snap-start">
         <About />
       </section>
-      <section id="experience" className="snap-start">
+      {/* <section id="experience" className="snap-start">
         <Experience />
-      </section>
-      {/* Skills */}
+      </section> */}
       {/* Projects */}
-      {/* Contact */}
     </div>
   );
 }
