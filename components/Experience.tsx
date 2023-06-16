@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Experience } from "@/types/experience";
+import { Experience as Experience } from "@/types/experience";
 import { ExperienceCard } from "./ExperienceCard";
 import { FaDatabase } from "react-icons/fa";
 import {
