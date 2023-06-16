@@ -45,7 +45,7 @@ export default function Projects() {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
-        style={{ width: "95%", height: "70%" }}
+        style={{ width: "95%", height: "67%" }}
       >
         {projects.map((project, i) => (
           <SwiperSlide key={project.name}>
