@@ -67,7 +67,7 @@ export default function Experience() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-4 sm:gap-12 overflow-hidden text-left md:px-10"
+      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-4 px-1 sm:gap-12 overflow-hidden text-left md:px-10"
     >
       <h3 className="text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px] pt-24">
         Experience
@@ -81,7 +81,7 @@ export default function Experience() {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
-        style={{ width: "95%" }}
+        style={{ width: "95%", height: "75%" }}
       >
         {experiences.map((experience) => (
           <SwiperSlide key={experience.company}>
