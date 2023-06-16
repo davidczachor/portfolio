@@ -17,7 +17,7 @@ export default function About({}: Props) {
         About
       </h2>
 
-      <div className="flex flex-col items-center md:flex-row">
+      <div className="flex flex-col items-center md:flex-row sm:py-20">
         <motion.div
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -32,8 +32,8 @@ export default function About({}: Props) {
             className="rounded-full object-cover md:rounded-lg"
           />
         </motion.div>
-        <div className="space-y-10 px-0 py-24 md:px-10 md:py-0">
-          <p className="text-base">
+        <div className="space-y-10 px-0 py-24 sm:px-24 sm:mt-10">
+          <p className="text-base sm:text-lg">
             My name is David, a recent Software Engineering graduate from
             Conestoga College. I have a strong interest in web development and a
             passion for solving real-world problems through code. My skill set

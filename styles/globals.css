@@ -25,3 +25,10 @@ body {
 .swiper-scrollbar .swiper-scrollbar-drag {
   background: #f7ab0a;
 }
+
+@media (max-width: 640px) {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none;
+  }
+}

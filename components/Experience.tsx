@@ -6,6 +6,7 @@ import { FaDatabase } from "react-icons/fa";
 import { SiCsharp, SiPython, SiTypescript } from "react-icons/si";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar } from "swiper";
+import Conestoga from "../public/images/conestoga.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -17,42 +18,31 @@ import "swiper/css/scrollbar";
 
 export const experiences: Experience[] = [
   {
-    img: "/../public/images/profile.jpg",
-    title: "Software Developer",
-    subtitle: "Test Company",
+    img: Conestoga,
+    company: "Conestoga College",
+    position: "College Diploma",
     stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
     period: ["June 2023", "present"],
     bullets: [
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
+      "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",
+      "Developed a deep understanding of system fundamentals, including operating systems, computer architecture, and networking.",
+      "Learned and applied Object-Oriented Design principles to develop maintainable and scalable software.",
+      "Developed a strong understanding of User Interface and User Experience (UI/UX) design principles and best practices, and ability to design and implement intuitive and user-friendly interfaces.",
     ],
   },
   {
-    img: "/../public/images/profile.jpg",
-    title: "Software Developer",
-    subtitle: "Test Company",
+    img: Conestoga,
+    company: "Conestoga College",
+    position: "College Diploma",
     stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
     period: ["June 2023", "present"],
     bullets: [
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-    ],
-  },
-  {
-    img: "/../public/images/profile.jpg",
-    title: "Software Developer",
-    subtitle: "Test Company",
-    stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
-    period: ["June 2023", "present"],
-    bullets: [
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
-      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
+      "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",
+      "Developed a deep understanding of system fundamentals, including operating systems, computer architecture, and networking.",
+      "Learned and applied Object-Oriented Design principles to develop maintainable and scalable software.",
+      "Developed a strong understanding of User Interface and User Experience (UI/UX) design principles and best practices, and ability to design and implement intuitive and user-friendly interfaces.",
     ],
   },
 ];
@@ -63,9 +53,9 @@ export default function Experience() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-12 overflow-hidden py-24 text-left md:px-10"
+      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-4 sm:gap-12 overflow-hidden text-left md:px-10"
     >
-      <h3 className="text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px]">
+      <h3 className="text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px] pt-24">
         Experience
       </h3>
       <Swiper
@@ -80,7 +70,7 @@ export default function Experience() {
         style={{ width: "95%" }}
       >
         {experiences.map((experience) => (
-          <SwiperSlide key={experience.title}>
+          <SwiperSlide key={experience.company}>
             <ExperienceCard experience={experience} />
           </SwiperSlide>
         ))}

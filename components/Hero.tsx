@@ -11,7 +11,6 @@ export default function Hero({}: Props) {
   const [text, count] = useTypewriter({
     words: [
       "Software Developer",
-      "Code Crafter",
       "Web Developer",
       "Problem Solver",
       "Full Stack Developer",
