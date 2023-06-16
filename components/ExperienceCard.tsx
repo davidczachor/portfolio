@@ -9,24 +9,16 @@ type Props = {
 
 export function ExperienceCard({ experience }: Props) {
   return (
-    <article className="relative flex w-full flex-shrink-0 snap-center flex-col items-center space-y-7 overflow-hidden rounded-lg bg-[#292929] p-10 opacity-40 transition-opacity duration-200 hover:opacity-100 md:w-[600px] xl:w-[900px]">
-      <motion.div
-        initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-        className="relative h-32 w-32 xl:h-[200px] xl:w-[200px]"
-      >
-        <Image
-          src={experience.img}
-          height={200}
-          width={200}
-          alt=""
-          className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        />
-      </motion.div>
+    <article className="justify relative flex w-auto flex-shrink-0 snap-center flex-col items-center overflow-hidden rounded-lg bg-[#292929] py-8 px-14 transition-opacity duration-200">
+      <Image
+        src={experience.img}
+        height={150}
+        width={150}
+        alt=""
+        className="relative rounded-full h-32 w-32 mx-auto object-cover"
+      />
 
-      <div className="px-0 md:px-10">
+      <div className="py-6 px-0 md:px-10">
         <h4 className="text-2xl font-medium md:text-4xl">{experience.title}</h4>
         <p className="mt-1 text-lg font-bold md:text-2xl">
           {experience.subtitle}

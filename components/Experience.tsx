@@ -4,6 +4,16 @@ import { Experience as Experience } from "@/types/Experience";
 import { ExperienceCard } from "./ExperienceCard";
 import { FaDatabase } from "react-icons/fa";
 import { SiCsharp, SiPython, SiTypescript } from "react-icons/si";
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export const experiences: Experience[] = [
   {
@@ -13,7 +23,10 @@ export const experiences: Experience[] = [
     stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
     period: ["June 2023", "present"],
     bullets: [
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam et aperiam molestiae aliquam eum atque porro eligendi quidem iste ad ea consectetur suscipit, architecto reiciendis explicabo deleniti laudantium, excepturi rerum?",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
     ],
   },
   {
@@ -23,8 +36,23 @@ export const experiences: Experience[] = [
     stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
     period: ["June 2023", "present"],
     bullets: [
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam et aperiam molestiae aliquam eum atque porro eligendi quidem iste ad ea consectetur suscipit, architecto reiciendis explicabo deleniti laudantium, excepturi rerum?",
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam et aperiam molestiae aliquam eum atque porro eligendi quidem iste ad ea consectetur suscipit, architecto reiciendis explicabo deleniti laudantium, excepturi rerum?",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+    ],
+  },
+  {
+    img: "/../public/images/profile.jpg",
+    title: "Software Developer",
+    subtitle: "Test Company",
+    stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
+    period: ["June 2023", "present"],
+    bullets: [
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
+      "This is a point. This is a point. This is a point. This is a point. This is a point.",
     ],
   },
 ];
@@ -35,17 +63,28 @@ export default function Experience() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-12 overflow-hidden py-14 px-4 text-left md:px-10"
+      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-12 overflow-hidden py-24 text-left md:px-10"
     >
-      <h3 className="font-cal text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px]">
+      <h3 className="text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px]">
         Experience
       </h3>
-      <div className="flex w-full snap-x snap-mandatory space-x-5 overflow-x-scroll scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-accent-500/80 md:p-10 ">
-        {/* Add 'overflow-x-scroll' */}
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar]}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        style={{ width: "95%" }}
+      >
         {experiences.map((experience) => (
-          <ExperienceCard key={experience.title} experience={experience} />
+          <SwiperSlide key={experience.title}>
+            <ExperienceCard experience={experience} />
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </motion.div>
   );
 }
