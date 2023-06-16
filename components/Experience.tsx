@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
     company: "Conestoga College",
     position: "College Diploma",
     stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
-    period: ["June 2023", "present"],
+    period: ["Jan 2022", "Apr 2023"],
     bullets: [
       "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
       "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",
@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     company: "Conestoga College",
     position: "College Diploma",
     stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
-    period: ["June 2023", "present"],
+    period: ["Jan 2022", "Apr 2023"],
     bullets: [
       "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
       "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",

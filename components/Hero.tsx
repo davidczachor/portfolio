@@ -31,17 +31,17 @@ export default function Hero({}: Props) {
         alt="Profile Picture"
       />
       <div className="z-20">
-        <h2 className="text-sm font-semibold uppercase text-gray-400 pb-2 tracking-[10px]">
+        <h2 className="text-sm font-medium uppercase text-gray-400 pb-2 tracking-[10px]">
           {"David Czachor"}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-2xl sm:text-6xl font-semibold py-2 sm:py-6">
           <span className="mr-3">
             {"I'm a "}
             {text}
           </span>
           <Cursor cursorColor="#F7AB0A" />
         </h1>
-        <div className="pt-5">
+        <div className="text-sm">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
