@@ -5,7 +5,7 @@ import { Navigation, Pagination, Scrollbar } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProjectCard from "./ProjectCard";
-import { Project as Project } from "@/types/project";
+import { Project } from "@/types";
 import Pokedex from "../public/images/pokedex-image.png";
 
 export const projects: Project[] = [

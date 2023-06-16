@@ -1,5 +1,5 @@
 import React from "react";
-import { Experience } from "@/types/experience";
+import { Experience } from "@/types";
 import Image from "next/image";
 
 type Props = {

@@ -9,3 +9,10 @@ export interface Experience {
   period: [string, string];
   bullets: string[];
 }
+
+export interface Project {
+  img: StaticImageData;
+  name: string;
+  link: string;
+  description: string;
+}
