@@ -1,38 +1,59 @@
 import React from "react";
 import { motion } from "framer-motion";
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar } from "swiper";
 
-type Props = {};
+import { Swiper, SwiperSlide } from "swiper/react";
+import ProjectCard from "./ProjectCard";
+import { Project } from "@/types/project";
+import Pokedex from "../public/images/pokedex-image.png";
 
-export default function Projects({}: Props) {
+export const projects: Project[] = [
+  {
+    img: Pokedex,
+    name: "Simple React Pokedex",
+    link: "https://pokedex.czachor.dev",
+    description:
+      "Constructed an interactive Pokedex application featuring capabilities such as search, caching, and infinite scrolling. The application showcases a responsive design and was built using Vite and React.",
+  },
+  {
+    img: Pokedex,
+    name: "Test 2",
+    link: "https://pokedex.czachor.dev",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut obcaecati quibusdam, impedit velit aperiam, quas atque, non itaque odit quidem enim porro? Aspernatur libero sit, ad perspiciatis saepe vitae",
+  },
+];
+
+export default function Projects() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="2xl:h-[80vh] h-screen relative mx-auto flex flex-col max-w-7xl items-center gap-12 py-24 px-4 text-left md:px-10"
+      className="h-screen relative mx-auto flex max-w-7xl flex-col items-center gap-4 sm:gap-12 overflow-hidden text-left md:px-10"
     >
-      <h2 className="font-cal text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px]">
+      <h3 className="text-2xl uppercase tracking-[15px] text-gray-400 md:tracking-[20px] pt-24">
         Projects
-      </h2>
-
-      <div className="flex flex-col items-center md:flex-row">
-        <motion.div
-          initial={{ opacity: 0, x: -200 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.5 }}
-          viewport={{ once: true }}
-          className="md:md-0 relative -mb-20 h-56 w-56 flex-shrink-0 md:h-72 md:w-72 xl:h-[500px] xl:w-[400px]"
-        ></motion.div>
-        <div className="space-y-10 px-0 py-24 md:px-10 md:py-0">
-          <p className="text-base">
-            My name is David, a recent Software Engineering graduate from
-            Conestoga College. I have a strong interest in web development and a
-            passion for solving real-world problems through code. My skill set
-            includes React, JavaScript, TypeScript, Next.js, CSS, HTML, Node,
-            Express, and SQL.
-          </p>
-        </div>
-      </div>
+      </h3>
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar]}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        style={{ width: "95%" }}
+      >
+        {projects.map((project, i) => (
+          <SwiperSlide key={project.name}>
+            <ProjectCard project={project} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[400px] sm:h-[500px] -skew-y-12 "></div>
     </motion.div>
   );
 }

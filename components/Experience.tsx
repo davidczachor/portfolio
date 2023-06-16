@@ -1,9 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Experience as Experience } from "@/types/Experience";
+import { Experience } from "@/types/experience";
 import { ExperienceCard } from "./ExperienceCard";
 import { FaDatabase } from "react-icons/fa";
-import { SiCsharp, SiPython, SiTypescript } from "react-icons/si";
+import {
+  SiC,
+  SiCplusplus,
+  SiCsharp,
+  SiJavascript,
+  SiPython,
+  SiTypescript,
+} from "react-icons/si";
 // import Swiper core and required modules
 import { Navigation, Pagination, Scrollbar } from "swiper";
 import Conestoga from "../public/images/conestoga.png";
@@ -21,8 +28,29 @@ export const experiences: Experience[] = [
     img: Conestoga,
     company: "Conestoga College",
     position: "College Diploma",
-    stackIcons: [SiPython, SiCsharp, SiTypescript, FaDatabase],
+    stackIcons: [
+      SiCsharp,
+      SiJavascript,
+      SiPython,
+      SiC,
+      SiCplusplus,
+      FaDatabase,
+    ],
     period: ["Jan 2022", "Apr 2023"],
+    bullets: [
+      "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
+      "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",
+      "Developed a deep understanding of system fundamentals, including operating systems, computer architecture, and networking.",
+      "Learned and applied Object-Oriented Design principles to develop maintainable and scalable software.",
+      "Developed a strong understanding of User Interface and User Experience (UI/UX) design principles and best practices, and ability to design and implement intuitive and user-friendly interfaces.",
+    ],
+  },
+  {
+    img: Conestoga,
+    company: "Test 2",
+    position: "Test 2",
+    stackIcons: [SiCsharp, SiJavascript, SiTypescript],
+    period: ["Jan 2022", "Present"],
     bullets: [
       "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
       "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",

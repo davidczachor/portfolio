@@ -1,5 +1,5 @@
 import React from "react";
-import { Experience } from "@/types/Experience";
+import { Experience } from "@/types/experience";
 import Image from "next/image";
 
 type Props = {
@@ -10,7 +10,7 @@ export function ExperienceCard({ experience }: Props) {
   return (
     <article className="relative flex flex-col w-auto flex-shrink-0 snap-center overflow-hidden rounded-lg bg-[#292929] px-6 py-6 sm:py-12 sm:px-24 transition-opacity duration-200">
       <div className="container flex flex-row">
-        <div className="content flex-grow lg:pt-6 sm:pt-8 pt-1">
+        <div className="content flex-grow lg:pt-6 sm:pt-9 pt-1">
           <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-medium">
             {experience.company}
           </h4>
@@ -29,13 +29,13 @@ export function ExperienceCard({ experience }: Props) {
             Start: {experience.period[0]} | End: {experience.period[1]}
           </p>
         </div>
-        <div className="image flex-shrink-0 md:ml-6 px-6 py-6 md:py-0">
+        <div className="image flex-shrink-0 md:ml-6 py-4 md:py-0">
           <Image
             src={experience.img}
             height={200}
             width={200}
-            alt=""
-            className="relative rounded-full sm:rounded-lg h-20 w-20 sm:h-36 sm:w-36 md:h-40 md:w-40 object-scale-down lg:w-48 lg:h-48 sm:block bg-white"
+            alt={`Picture of ${experience.company} logo`}
+            className="relative rounded-full md:rounded-lg h-20 w-20 sm:h-36 sm:w-36 md:h-40 md:w-40 object-scale-down lg:w-48 lg:h-48 sm:block bg-white"
           />
         </div>
       </div>
