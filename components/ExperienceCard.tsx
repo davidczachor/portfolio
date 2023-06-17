@@ -8,7 +8,7 @@ type Props = {
 
 export function ExperienceCard({ experience }: Props) {
   return (
-    <article className="relative flex flex-col w-auto flex-shrink-0 snap-center overflow-hidden rounded-lg bg-[#292929] px-6 py-6 sm:py-12 sm:px-12 md:px-24 transition-opacity duration-200 xl:h-[85%] 2xl:h-[80%] justify-center">
+    <article className="relative flex flex-col w-auto flex-shrink-0 snap-center overflow-hidden rounded-lg bg-[#292929] px-6 py-6 sm:py-12 sm:px-12 md:py-32 md:px-24 transition-opacity duration-200 xl:h-[85%] 2xl:h-[80%] justify-center mb-5">
       <div className="container flex flex-row">
         <div className="content flex-grow lg:pt-6 sm:pt-9 pt-1">
           <h4 className="text-lg sm:text-xl md:text-2xl lg:text-4xl font-medium">

@@ -81,7 +81,7 @@ export default function Experience() {
         scrollbar={{ draggable: true }}
         onSwiper={(swiper) => console.log(swiper)}
         onSlideChange={() => console.log("slide change")}
-        style={{ width: "95%", height: "75%" }}
+        style={{ width: "95%" }}
       >
         {experiences.map((experience) => (
           <SwiperSlide key={experience.company}>
