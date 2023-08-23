@@ -45,20 +45,6 @@ export const experiences: Experience[] = [
       "Developed a strong understanding of User Interface and User Experience (UI/UX) design principles and best practices, and ability to design and implement intuitive and user-friendly interfaces.",
     ],
   },
-  {
-    img: Conestoga,
-    company: "Test 2",
-    position: "Test 2",
-    stackIcons: [SiCsharp, SiJavascript, SiTypescript],
-    period: ["Jan 2022", "Present"],
-    bullets: [
-      "Developed a strong understanding of relational databases and the ability to design, implement and maintain them.",
-      "Acquired skills in web development technologies such as HTML, CSS, JavaScript, and ASP.net.",
-      "Developed a deep understanding of system fundamentals, including operating systems, computer architecture, and networking.",
-      "Learned and applied Object-Oriented Design principles to develop maintainable and scalable software.",
-      "Developed a strong understanding of User Interface and User Experience (UI/UX) design principles and best practices, and ability to design and implement intuitive and user-friendly interfaces.",
-    ],
-  },
 ];
 
 export default function Experience() {
