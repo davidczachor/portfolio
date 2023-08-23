@@ -16,13 +16,6 @@ export const projects: Project[] = [
     description:
       "Constructed an interactive Pokedex application featuring capabilities such as search, caching, and infinite scrolling. The application showcases a responsive design and was built using Vite and React.",
   },
-  {
-    img: Pokedex,
-    name: "Test 2",
-    link: "https://pokedex.czachor.dev",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ut obcaecati quibusdam, impedit velit aperiam, quas atque, non itaque odit quidem enim porro? Aspernatur libero sit, ad perspiciatis saepe vitae",
-  },
 ];
 
 export default function Projects() {
